@@ -1,0 +1,19 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.cgy.plugins.lazyHelper</id>
+    <name>懒人插件</name>
+    <vendor email="848209099@chinasie.com">GUIYANG CUI</vendor>
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <!--先设置group,把功能进行分组-->
+        <group id="LazyHelperGroup" class="com.cgy.plugin.action.group.LazyHelperGroup" icon="icons/LazyHelper.svg" popup="true"
+               text="懒人助手" description="懒人助手">
+            <!-- action配置，按钮展示在哪里需要在这配置 -->
+            <action id="initProjSettings" class="com.cgy.plugin.action.act.InitProjSettings" text="一键设置UTF-8"
+                    description="一键设置UTF-8">
+            </action>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </group>
+    </actions>
+</idea-plugin>
